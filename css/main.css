@@ -73,7 +73,7 @@ body {
 }
 
 .card__text p {
-    font-size: .8rem;
+    font-size: .82rem;
     color: var(--DesaturatedDarkBlue);
     line-height: 1.3rem;
 }
@@ -113,23 +113,61 @@ body {
 
 .footer_share {
     background-color: var(--LightGrayishBlue);
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content:center;
+    
+    cursor: pointer;
+
+    z-index: 110;
 }
+
+.card__share {
+    background-color: var(--VeryDarkGrayishBlue);
+    position: absolute;
+    z-index: 100;
+    height: 70px;
+    width: 20.3rem;
+    left: 25px;
+    bottom: 18px;
+
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+
+    visibility: hidden;
+}
+
+.share_title h3 {
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--DesaturatedDarkBlue)
+}
+
+.share_imgs img{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
 
 
 @media (min-width: 1440px) {
     .wrapper {
+        width: 880px;
         display: flex;
     }
 
     .container_img {
-        width: 400px;
-        height: 320px;
+        background-position: left;
+        width: 330px;
+        height: 330px;
         border-top-right-radius: 0;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
@@ -140,9 +178,13 @@ body {
         width: 550px;
     }
 
+    .card__text {
+        margin-bottom: 1.4rem;
+    }
+
     .card__text h2 {
         font-size: 1.6rem;
-        line-height: 1.3
+        line-height: 1.3;
     }
 
     .card__text p {
