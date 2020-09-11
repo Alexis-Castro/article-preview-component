@@ -1,18 +1,15 @@
 
 
-const share = document.getElementById('container-share')
+const share = document.querySelector('#container-share');
+const shareBtn = document.querySelector('#container-share svg path');
+const cardShare = document.querySelector('.card__share');
 
 
 share.addEventListener('click', () => {
-    const cardShare = document.querySelector('.card__share');
+    cardShare.classList.toggle('oculto');
+    share.classList.toggle('activo');
+    shareBtn.classList.toggle('arrow-white');
 
-    if (cardShare.style.visibility === '' || cardShare.style.visibility === 'hidden') {
-        cardShare.style.visibility = 'visible'
-        
-    } else{
-        cardShare.style.visibility = 'hidden'
-        
-    }
 })
 
 
